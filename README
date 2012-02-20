@@ -1,0 +1,9 @@
+ARC test suite:
+
+arcTestSuite: Where tests are created and stored
+
+arcTestArea: Where tests are run
+
+arcTestResults: Where results are collected and stored
+
+
