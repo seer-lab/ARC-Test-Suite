@@ -1,9 +1,10 @@
 ARC test suite:
 
-arcTestSuite: Where tests are created and stored
+arcTestSuite: Tests are created and stored here.
 
-arcTestArea: Where tests are run
+arcTestArea: Tests are run from here.  Scripting allows them
+             to be run in batches.
 
-arcTestResults: Where results are collected and stored
+arcTestResults: Results are collected and stored for analysis.
 
 
