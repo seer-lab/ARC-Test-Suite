@@ -5,4 +5,4 @@ In this file you will find the number of the bug appearances accordingly to the 
 
 Few Threads: 
 
-Number Of Threads: 17 Number Of Bugs: 16 bugs. 
+Number Of Threads: 17 Number Of Bugs: 14 bugs. 

@@ -5,4 +5,4 @@ In this file you will find the number of the bug appearances accordingly to the 
 
 A Lot Of Threads: 
 
-Number Of Threads: 120 Number Of Bugs: 118 bugs. 
+Number Of Threads: 120 Number Of Bugs: 113 bugs. 

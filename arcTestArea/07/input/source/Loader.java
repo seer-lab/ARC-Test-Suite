@@ -26,12 +26,16 @@ static boolean OperatedCorrectly = false;
 
      OperatedCorrectly = false;
 
+     // DK: Contest gives out of memory errors if (sum of?) threads goes over
+     // ~2030.  Trying lower values of 100/500/1000.  Error is still aptly
+     // generated.
+     // ORIGINAL values were 200 / 1000 / 20000
      if(conc.equals("little"))
-       len=200;
+       len=100;
      if(conc.equals("average"))
-       len=1000;
+       len=500;
      if(conc.equals("lot"))
-       len=20000;
+       len=1000;  // DK: Out of memory error at thread 2033
 
      array=new int[len];
      Thread curTh=Thread.currentThread();
