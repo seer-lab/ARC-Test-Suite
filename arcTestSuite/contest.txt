@@ -1,0 +1,1 @@
+java -Xmx2000m -cp /home/dkelk/workspace/arc/input/class/:/home/dkelk/workspace/arc/input/test/:/home/dkelk/workspace/arc/lib/junit-4.8.1.jar -javaagent:/home/dkelk/workspace/arc/lib/contest/contest.jar -Dcontest.verbose=0 org.junit.runner.JUnitCore AccountTest

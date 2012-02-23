@@ -1,0 +1,638 @@
+36 INFO [contester._check_tools] Checking if txl is present
+40 INFO [contester._check_tools] Checking if ConTest is present
+41 INFO [contester._check_tools] Checking if ConTest's KingProperties is present
+41 INFO [contester._check_tools] All Pass
+41 INFO [contester.setup] Configuring ConTest's KingProperties file
+64 DEBUG [txl_operator.backup_project] Backing up (global) project:
+64 DEBUG [txl_operator.backup_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/ 
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/project_backup/
+94 INFO [evolution.start] Creating and initializing the population
+94 DEBUG [evolution.initialize] Creating individual 1
+94 DEBUG [evolution.initialize] Creating individual 2
+94 DEBUG [evolution.initialize] Creating individual 3
+94 DEBUG [evolution.initialize] Creating individual 4
+94 DEBUG [evolution.initialize] Creating individual 5
+95 DEBUG [evolution.initialize] Creating individual 6
+95 DEBUG [evolution.initialize] Creating individual 7
+95 DEBUG [evolution.initialize] Creating individual 8
+95 DEBUG [evolution.initialize] Creating individual 9
+95 DEBUG [evolution.initialize] Creating individual 10
+95 INFO [evolution.start] Evolving population towards functional correctness
+95 DEBUG [evolution.mutation] 
+
+Mutating individual 1 at generation 1
+664 DEBUG [txl_operator.generate_representation] Arguments received: 1 1
+668 DEBUG [evolution.feedback_selection] Voting for functional phase with deadlocks: [8, 8, 8, 8, 8, 8, 8, 8]
+668 DEBUG [evolution.mutation] No mutations at operatorIndex 7
+668 DEBUG [evolution.feedback_selection] Voting for functional phase with dataraces: [7, 7, 7, 7, 7, 7, 7]
+668 DEBUG [evolution.mutation] No mutations at operatorIndex 6
+668 DEBUG [evolution.feedback_selection] Voting for functional phase with dataraces: [7, 7, 7, 7, 7, 7, 7]
+668 DEBUG [evolution.mutation] No mutations at operatorIndex 6
+669 DEBUG [evolution.feedback_selection] Voting for functional phase with deadlocks: [8, 8, 8, 8, 8, 8, 8, 8]
+669 DEBUG [evolution.mutation] No mutations at operatorIndex 7
+669 DEBUG [evolution.feedback_selection] Voting for functional phase with deadlocks: [8, 8, 8, 8, 8, 8, 8, 8]
+669 DEBUG [txl_operator.create_local_project] Input arguments:  Gen: 1, Mem: 1 and Restart: False
+669 DEBUG [txl_operator.create_local_project] Creating local project:
+669 DEBUG [txl_operator.create_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/project_backup/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/1/project/
+670 DEBUG [txl_operator.move_mutant_to_local_project] Op: ASM -> Gen: 1 Mem: 1 
+671 DEBUG [txl_operator.move_mutant_to_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/1/deadLock/ASM/ASM_deadLock.java_1/deadLock.java 
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/1/project/deadLock.java
+673 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+673 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/1/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+677 DEBUG [evolution.mutation] Attempting to compile...
+678 DEBUG [txl_operator.compile_project] Compiling new source files
+2230 DEBUG [evolution.mutation]   Success!
+2230 INFO [evolution.mutation] Selected operator for Individual 1 @ generation 1: ASM
+2230 DEBUG [evolution.mutation] 
+
+Mutating individual 2 at generation 1
+2794 DEBUG [txl_operator.generate_representation] Arguments received: 1 2
+2797 DEBUG [evolution.feedback_selection] Voting for functional phase with deadlocks: [8, 8, 8, 8, 8, 8, 8, 8]
+2797 DEBUG [txl_operator.create_local_project] Input arguments:  Gen: 1, Mem: 2 and Restart: False
+2798 DEBUG [txl_operator.create_local_project] Creating local project:
+2798 DEBUG [txl_operator.create_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/project_backup/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/2/project/
+2799 DEBUG [txl_operator.move_mutant_to_local_project] Op: CSO -> Gen: 1 Mem: 2 
+2799 DEBUG [txl_operator.move_mutant_to_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/2/deadLock/CSO/CSO_deadLock.java_1/deadLock.java 
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/2/project/deadLock.java
+2802 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+2802 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/2/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+2804 DEBUG [evolution.mutation] Attempting to compile...
+2804 DEBUG [txl_operator.compile_project] Compiling new source files
+4370 DEBUG [evolution.mutation]   Success!
+4370 INFO [evolution.mutation] Selected operator for Individual 2 @ generation 1: CSO
+4370 DEBUG [evolution.mutation] 
+
+Mutating individual 3 at generation 1
+4993 DEBUG [txl_operator.generate_representation] Arguments received: 1 3
+4997 DEBUG [evolution.feedback_selection] Voting for functional phase with deadlocks: [8, 8, 8, 8, 8, 8, 8, 8]
+4997 DEBUG [evolution.mutation] No mutations at operatorIndex 6
+4997 DEBUG [evolution.feedback_selection] Voting for functional phase with dataraces: [7, 7, 7, 7, 7, 7, 7]
+4997 DEBUG [txl_operator.create_local_project] Input arguments:  Gen: 1, Mem: 3 and Restart: False
+4997 DEBUG [txl_operator.create_local_project] Creating local project:
+4997 DEBUG [txl_operator.create_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/project_backup/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/3/project/
+4998 DEBUG [txl_operator.move_mutant_to_local_project] Op: EXSB -> Gen: 1 Mem: 3 
+4999 DEBUG [txl_operator.move_mutant_to_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/3/deadLock/EXSB/EXSB_deadLock.java_1/deadLock.java 
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/3/project/deadLock.java
+4999 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+4999 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/3/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+5002 DEBUG [evolution.mutation] Attempting to compile...
+5002 DEBUG [txl_operator.compile_project] Compiling new source files
+6548 DEBUG [evolution.mutation]   Success!
+6548 INFO [evolution.mutation] Selected operator for Individual 3 @ generation 1: EXSB
+6548 DEBUG [evolution.mutation] 
+
+Mutating individual 4 at generation 1
+7151 DEBUG [txl_operator.generate_representation] Arguments received: 1 4
+7154 DEBUG [evolution.feedback_selection] Voting for functional phase with dataraces: [7, 7, 7, 7, 7, 7, 7]
+7154 DEBUG [evolution.mutation] No mutations at operatorIndex 7
+7154 DEBUG [evolution.feedback_selection] Voting for functional phase with deadlocks: [8, 8, 8, 8, 8, 8, 8, 8]
+7154 DEBUG [txl_operator.create_local_project] Input arguments:  Gen: 1, Mem: 4 and Restart: False
+7155 DEBUG [txl_operator.create_local_project] Creating local project:
+7155 DEBUG [txl_operator.create_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/project_backup/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/4/project/
+7165 DEBUG [txl_operator.move_mutant_to_local_project] Op: ASAV -> Gen: 1 Mem: 4 
+7165 DEBUG [txl_operator.move_mutant_to_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/4/deadLock/ASAV/ASAV_deadLock.java_7/deadLock.java 
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/4/project/deadLock.java
+7168 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+7168 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/4/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+7172 DEBUG [evolution.mutation] Attempting to compile...
+7172 DEBUG [txl_operator.compile_project] Compiling new source files
+8783 DEBUG [evolution.mutation]   Success!
+8783 INFO [evolution.mutation] Selected operator for Individual 4 @ generation 1: ASAV
+8784 DEBUG [evolution.mutation] 
+
+Mutating individual 5 at generation 1
+9389 DEBUG [txl_operator.generate_representation] Arguments received: 1 5
+9392 DEBUG [evolution.feedback_selection] Voting for functional phase with deadlocks: [8, 8, 8, 8, 8, 8, 8, 8]
+9392 DEBUG [txl_operator.create_local_project] Input arguments:  Gen: 1, Mem: 5 and Restart: False
+9392 DEBUG [txl_operator.create_local_project] Creating local project:
+9393 DEBUG [txl_operator.create_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/project_backup/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/5/project/
+9394 DEBUG [txl_operator.move_mutant_to_local_project] Op: CSO -> Gen: 1 Mem: 5 
+9394 DEBUG [txl_operator.move_mutant_to_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/5/deadLock/CSO/CSO_deadLock.java_1/deadLock.java 
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/5/project/deadLock.java
+9394 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+9395 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/5/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+9396 DEBUG [evolution.mutation] Attempting to compile...
+9396 DEBUG [txl_operator.compile_project] Compiling new source files
+11000 DEBUG [evolution.mutation]   Success!
+11001 INFO [evolution.mutation] Selected operator for Individual 5 @ generation 1: CSO
+11001 DEBUG [evolution.mutation] 
+
+Mutating individual 6 at generation 1
+11560 DEBUG [txl_operator.generate_representation] Arguments received: 1 6
+11565 DEBUG [evolution.feedback_selection] Voting for functional phase with dataraces: [7, 7, 7, 7, 7, 7, 7]
+11565 DEBUG [txl_operator.create_local_project] Input arguments:  Gen: 1, Mem: 6 and Restart: False
+11565 DEBUG [txl_operator.create_local_project] Creating local project:
+11566 DEBUG [txl_operator.create_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/project_backup/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/6/project/
+11567 DEBUG [txl_operator.move_mutant_to_local_project] Op: ASM -> Gen: 1 Mem: 6 
+11568 DEBUG [txl_operator.move_mutant_to_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/6/deadLock/ASM/ASM_deadLock.java_4/deadLock.java 
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/6/project/deadLock.java
+11568 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+11568 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/6/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+11571 DEBUG [evolution.mutation] Attempting to compile...
+11571 DEBUG [txl_operator.compile_project] Compiling new source files
+13119 DEBUG [evolution.mutation]   Success!
+13120 INFO [evolution.mutation] Selected operator for Individual 6 @ generation 1: ASM
+13120 DEBUG [evolution.mutation] 
+
+Mutating individual 7 at generation 1
+13701 DEBUG [txl_operator.generate_representation] Arguments received: 1 7
+13704 DEBUG [evolution.feedback_selection] Voting for functional phase with dataraces: [7, 7, 7, 7, 7, 7, 7]
+13704 DEBUG [evolution.mutation] No mutations at operatorIndex 4
+13704 DEBUG [evolution.feedback_selection] Voting for functional phase with dataraces: [7, 7, 7, 7, 7, 7, 7]
+13705 DEBUG [txl_operator.create_local_project] Input arguments:  Gen: 1, Mem: 7 and Restart: False
+13705 DEBUG [txl_operator.create_local_project] Creating local project:
+13705 DEBUG [txl_operator.create_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/project_backup/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/7/project/
+13706 DEBUG [txl_operator.move_mutant_to_local_project] Op: ASM -> Gen: 1 Mem: 7 
+13706 DEBUG [txl_operator.move_mutant_to_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/7/deadLock/ASM/ASM_deadLock.java_2/deadLock.java 
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/7/project/deadLock.java
+13707 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+13707 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/7/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+13709 DEBUG [evolution.mutation] Attempting to compile...
+13709 DEBUG [txl_operator.compile_project] Compiling new source files
+15318 DEBUG [evolution.mutation]   Success!
+15319 INFO [evolution.mutation] Selected operator for Individual 7 @ generation 1: ASM
+15319 DEBUG [evolution.mutation] 
+
+Mutating individual 8 at generation 1
+15885 DEBUG [txl_operator.generate_representation] Arguments received: 1 8
+15888 DEBUG [evolution.feedback_selection] Voting for functional phase with deadlocks: [8, 8, 8, 8, 8, 8, 8, 8]
+15889 DEBUG [txl_operator.create_local_project] Input arguments:  Gen: 1, Mem: 8 and Restart: False
+15889 DEBUG [txl_operator.create_local_project] Creating local project:
+15889 DEBUG [txl_operator.create_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/project_backup/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/8/project/
+15890 DEBUG [txl_operator.move_mutant_to_local_project] Op: EXSB -> Gen: 1 Mem: 8 
+15891 DEBUG [txl_operator.move_mutant_to_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/8/deadLock/EXSB/EXSB_deadLock.java_1/deadLock.java 
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/8/project/deadLock.java
+15891 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+15891 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/8/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+15894 DEBUG [evolution.mutation] Attempting to compile...
+15895 DEBUG [txl_operator.compile_project] Compiling new source files
+17476 DEBUG [evolution.mutation]   Success!
+17476 INFO [evolution.mutation] Selected operator for Individual 8 @ generation 1: EXSB
+17477 DEBUG [evolution.mutation] 
+
+Mutating individual 9 at generation 1
+18037 DEBUG [txl_operator.generate_representation] Arguments received: 1 9
+18040 DEBUG [evolution.feedback_selection] Voting for functional phase with deadlocks: [8, 8, 8, 8, 8, 8, 8, 8]
+18040 DEBUG [evolution.mutation] No mutations at operatorIndex 4
+18040 DEBUG [evolution.feedback_selection] Voting for functional phase with dataraces: [7, 7, 7, 7, 7, 7, 7]
+18041 DEBUG [txl_operator.create_local_project] Input arguments:  Gen: 1, Mem: 9 and Restart: False
+18041 DEBUG [txl_operator.create_local_project] Creating local project:
+18041 DEBUG [txl_operator.create_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/project_backup/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/9/project/
+18042 DEBUG [txl_operator.move_mutant_to_local_project] Op: ASM -> Gen: 1 Mem: 9 
+18042 DEBUG [txl_operator.move_mutant_to_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/9/deadLock/ASM/ASM_deadLock.java_4/deadLock.java 
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/9/project/deadLock.java
+18043 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+18044 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/9/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+18049 DEBUG [evolution.mutation] Attempting to compile...
+18049 DEBUG [txl_operator.compile_project] Compiling new source files
+19585 DEBUG [evolution.mutation]   Success!
+19586 INFO [evolution.mutation] Selected operator for Individual 9 @ generation 1: ASM
+19586 DEBUG [evolution.mutation] 
+
+Mutating individual 10 at generation 1
+20140 DEBUG [txl_operator.generate_representation] Arguments received: 1 10
+20144 DEBUG [evolution.feedback_selection] Voting for functional phase with dataraces: [7, 7, 7, 7, 7, 7, 7]
+20144 DEBUG [txl_operator.create_local_project] Input arguments:  Gen: 1, Mem: 10 and Restart: False
+20144 DEBUG [txl_operator.create_local_project] Creating local project:
+20144 DEBUG [txl_operator.create_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/project_backup/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/10/project/
+20145 DEBUG [txl_operator.move_mutant_to_local_project] Op: ASAV -> Gen: 1 Mem: 10 
+20146 DEBUG [txl_operator.move_mutant_to_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/10/deadLock/ASAV/ASAV_deadLock.java_4/deadLock.java 
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/10/project/deadLock.java
+20146 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+20147 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/10/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+20148 DEBUG [evolution.mutation] Attempting to compile...
+20148 DEBUG [txl_operator.compile_project] Compiling new source files
+21693 DEBUG [evolution.mutation]   Success!
+21694 INFO [evolution.mutation] Selected operator for Individual 10 @ generation 1: ASAV
+21694 INFO [evolution.evaluate] 
+
+Evaluating individual 1 on generation 1
+21694 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+21694 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/1/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+21696 DEBUG [txl_operator.compile_project] Compiling new source files
+23255 DEBUG [tester.begin_testing] Performing 5 Test Runs...
+24173 DEBUG [tester.run_test] Test 1 - Error in Execution
+24984 DEBUG [tester.run_test] Test 2 - Error in Execution
+25811 DEBUG [tester.run_test] Test 3 - Error in Execution
+26632 DEBUG [tester.run_test] Test 4 - Error in Execution
+27447 DEBUG [tester.run_test] Test 5 - Error in Execution
+27447 DEBUG [tester.begin_testing] Test Runs Results...
+27448 DEBUG [tester.begin_testing] Successes: 0
+27448 DEBUG [tester.begin_testing] Timeouts: 0
+27448 DEBUG [tester.begin_testing] Dataraces: 0
+27448 DEBUG [tester.begin_testing] Deadlock: 0
+27448 DEBUG [tester.begin_testing] Errors: 5
+27448 DEBUG [tester.begin_testing] Real Time: []
+27448 DEBUG [tester.begin_testing] Wall Time: []
+27449 DEBUG [tester.begin_testing] Voluntary Switches: []
+27449 DEBUG [tester.begin_testing] Involuntary Switches: []
+27449 DEBUG [tester.begin_testing] Percent CPU: []
+27449 DEBUG [tester.begin_testing] Good Runs: [False, False, False, False, False]
+27449 INFO [evolution.evaluate] 
+
+Evaluating individual 2 on generation 1
+27450 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+27450 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/2/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+27452 DEBUG [txl_operator.compile_project] Compiling new source files
+29173 DEBUG [tester.begin_testing] Performing 5 Test Runs...
+29909 DEBUG [tester.run_test] Test 1 - Error in Execution
+30722 DEBUG [tester.run_test] Test 2 - Error in Execution
+31544 DEBUG [tester.run_test] Test 3 - Error in Execution
+32361 DEBUG [tester.run_test] Test 4 - Successful Execution
+33177 DEBUG [tester.run_test] Test 5 - Error in Execution
+33178 DEBUG [tester.begin_testing] Test Runs Results...
+33178 DEBUG [tester.begin_testing] Successes: 1
+33178 DEBUG [tester.begin_testing] Timeouts: 0
+33179 DEBUG [tester.begin_testing] Dataraces: 0
+33179 DEBUG [tester.begin_testing] Deadlock: 0
+33179 DEBUG [tester.begin_testing] Errors: 4
+33179 DEBUG [tester.begin_testing] Real Time: []
+33179 DEBUG [tester.begin_testing] Wall Time: []
+33179 DEBUG [tester.begin_testing] Voluntary Switches: []
+33179 DEBUG [tester.begin_testing] Involuntary Switches: []
+33179 DEBUG [tester.begin_testing] Percent CPU: []
+33180 DEBUG [tester.begin_testing] Good Runs: [False, False, False, True, False]
+33180 INFO [evolution.evaluate] 
+
+Evaluating individual 3 on generation 1
+33180 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+33180 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/3/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+33193 DEBUG [txl_operator.compile_project] Compiling new source files
+34733 DEBUG [tester.begin_testing] Performing 5 Test Runs...
+35565 DEBUG [tester.run_test] Test 1 - Error in Execution
+36427 DEBUG [tester.run_test] Test 2 - Error in Execution
+37250 DEBUG [tester.run_test] Test 3 - Error in Execution
+38068 DEBUG [tester.run_test] Test 4 - Error in Execution
+38889 DEBUG [tester.run_test] Test 5 - Error in Execution
+38889 DEBUG [tester.begin_testing] Test Runs Results...
+38889 DEBUG [tester.begin_testing] Successes: 0
+38890 DEBUG [tester.begin_testing] Timeouts: 0
+38890 DEBUG [tester.begin_testing] Dataraces: 0
+38890 DEBUG [tester.begin_testing] Deadlock: 0
+38890 DEBUG [tester.begin_testing] Errors: 5
+38890 DEBUG [tester.begin_testing] Real Time: []
+38890 DEBUG [tester.begin_testing] Wall Time: []
+38890 DEBUG [tester.begin_testing] Voluntary Switches: []
+38890 DEBUG [tester.begin_testing] Involuntary Switches: []
+38891 DEBUG [tester.begin_testing] Percent CPU: []
+38891 DEBUG [tester.begin_testing] Good Runs: [False, False, False, False, False]
+38891 INFO [evolution.evaluate] 
+
+Evaluating individual 4 on generation 1
+38891 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+38891 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/4/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+38894 DEBUG [txl_operator.compile_project] Compiling new source files
+40524 DEBUG [tester.begin_testing] Performing 5 Test Runs...
+41372 DEBUG [tester.run_test] Test 1 - Successful Execution
+42202 DEBUG [tester.run_test] Test 2 - Error in Execution
+43045 DEBUG [tester.run_test] Test 3 - Error in Execution
+43894 DEBUG [tester.run_test] Test 4 - Successful Execution
+44710 DEBUG [tester.run_test] Test 5 - Error in Execution
+44710 DEBUG [tester.begin_testing] Test Runs Results...
+44710 DEBUG [tester.begin_testing] Successes: 2
+44710 DEBUG [tester.begin_testing] Timeouts: 0
+44710 DEBUG [tester.begin_testing] Dataraces: 0
+44711 DEBUG [tester.begin_testing] Deadlock: 0
+44711 DEBUG [tester.begin_testing] Errors: 3
+44711 DEBUG [tester.begin_testing] Real Time: []
+44711 DEBUG [tester.begin_testing] Wall Time: []
+44711 DEBUG [tester.begin_testing] Voluntary Switches: []
+44711 DEBUG [tester.begin_testing] Involuntary Switches: []
+44711 DEBUG [tester.begin_testing] Percent CPU: []
+44711 DEBUG [tester.begin_testing] Good Runs: [True, False, False, True, False]
+44712 INFO [evolution.evaluate] 
+
+Evaluating individual 5 on generation 1
+44712 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+44712 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/5/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+44715 DEBUG [txl_operator.compile_project] Compiling new source files
+46379 DEBUG [tester.begin_testing] Performing 5 Test Runs...
+47195 DEBUG [tester.run_test] Test 1 - Error in Execution
+48023 DEBUG [tester.run_test] Test 2 - Error in Execution
+48894 DEBUG [tester.run_test] Test 3 - Error in Execution
+49737 DEBUG [tester.run_test] Test 4 - Error in Execution
+50591 DEBUG [tester.run_test] Test 5 - Error in Execution
+50592 DEBUG [tester.begin_testing] Test Runs Results...
+50592 DEBUG [tester.begin_testing] Successes: 0
+50592 DEBUG [tester.begin_testing] Timeouts: 0
+50592 DEBUG [tester.begin_testing] Dataraces: 0
+50592 DEBUG [tester.begin_testing] Deadlock: 0
+50592 DEBUG [tester.begin_testing] Errors: 5
+50592 DEBUG [tester.begin_testing] Real Time: []
+50592 DEBUG [tester.begin_testing] Wall Time: []
+50592 DEBUG [tester.begin_testing] Voluntary Switches: []
+50593 DEBUG [tester.begin_testing] Involuntary Switches: []
+50593 DEBUG [tester.begin_testing] Percent CPU: []
+50593 DEBUG [tester.begin_testing] Good Runs: [False, False, False, False, False]
+50593 INFO [evolution.evaluate] 
+
+Evaluating individual 6 on generation 1
+50593 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+50593 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/6/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+50595 DEBUG [txl_operator.compile_project] Compiling new source files
+52168 DEBUG [tester.begin_testing] Performing 5 Test Runs...
+53089 DEBUG [tester.run_test] Test 1 - Successful Execution
+53906 DEBUG [tester.run_test] Test 2 - Successful Execution
+54724 DEBUG [tester.run_test] Test 3 - Successful Execution
+55540 DEBUG [tester.run_test] Test 4 - Successful Execution
+56354 DEBUG [tester.run_test] Test 5 - Successful Execution
+56354 DEBUG [tester.begin_testing] Test Runs Results...
+56354 DEBUG [tester.begin_testing] Successes: 5
+56354 DEBUG [tester.begin_testing] Timeouts: 0
+56355 DEBUG [tester.begin_testing] Dataraces: 0
+56355 DEBUG [tester.begin_testing] Deadlock: 0
+56355 DEBUG [tester.begin_testing] Errors: 0
+56355 DEBUG [tester.begin_testing] Real Time: []
+56355 DEBUG [tester.begin_testing] Wall Time: []
+56355 DEBUG [tester.begin_testing] Voluntary Switches: []
+56355 DEBUG [tester.begin_testing] Involuntary Switches: []
+56355 DEBUG [tester.begin_testing] Percent CPU: []
+56356 DEBUG [tester.begin_testing] Good Runs: [True, True, True, True, True]
+56356 INFO [evolution.evaluate] 
+
+Evaluating individual 7 on generation 1
+56356 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+56356 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/7/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+56359 DEBUG [txl_operator.compile_project] Compiling new source files
+57982 DEBUG [tester.begin_testing] Performing 5 Test Runs...
+58809 DEBUG [tester.run_test] Test 1 - Error in Execution
+59638 DEBUG [tester.run_test] Test 2 - Error in Execution
+60456 DEBUG [tester.run_test] Test 3 - Successful Execution
+61293 DEBUG [tester.run_test] Test 4 - Error in Execution
+62109 DEBUG [tester.run_test] Test 5 - Error in Execution
+62110 DEBUG [tester.begin_testing] Test Runs Results...
+62110 DEBUG [tester.begin_testing] Successes: 1
+62110 DEBUG [tester.begin_testing] Timeouts: 0
+62110 DEBUG [tester.begin_testing] Dataraces: 0
+62111 DEBUG [tester.begin_testing] Deadlock: 0
+62111 DEBUG [tester.begin_testing] Errors: 4
+62111 DEBUG [tester.begin_testing] Real Time: []
+62111 DEBUG [tester.begin_testing] Wall Time: []
+62111 DEBUG [tester.begin_testing] Voluntary Switches: []
+62111 DEBUG [tester.begin_testing] Involuntary Switches: []
+62111 DEBUG [tester.begin_testing] Percent CPU: []
+62111 DEBUG [tester.begin_testing] Good Runs: [False, False, True, False, False]
+62112 INFO [evolution.evaluate] 
+
+Evaluating individual 8 on generation 1
+62112 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+62112 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/8/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+62115 DEBUG [txl_operator.compile_project] Compiling new source files
+63669 DEBUG [tester.begin_testing] Performing 5 Test Runs...
+64525 DEBUG [tester.run_test] Test 1 - Error in Execution
+65342 DEBUG [tester.run_test] Test 2 - Successful Execution
+66158 DEBUG [tester.run_test] Test 3 - Error in Execution
+66983 DEBUG [tester.run_test] Test 4 - Error in Execution
+67808 DEBUG [tester.run_test] Test 5 - Error in Execution
+67808 DEBUG [tester.begin_testing] Test Runs Results...
+67808 DEBUG [tester.begin_testing] Successes: 1
+67808 DEBUG [tester.begin_testing] Timeouts: 0
+67809 DEBUG [tester.begin_testing] Dataraces: 0
+67809 DEBUG [tester.begin_testing] Deadlock: 0
+67809 DEBUG [tester.begin_testing] Errors: 4
+67809 DEBUG [tester.begin_testing] Real Time: []
+67809 DEBUG [tester.begin_testing] Wall Time: []
+67809 DEBUG [tester.begin_testing] Voluntary Switches: []
+67809 DEBUG [tester.begin_testing] Involuntary Switches: []
+67809 DEBUG [tester.begin_testing] Percent CPU: []
+67810 DEBUG [tester.begin_testing] Good Runs: [False, True, False, False, False]
+67810 INFO [evolution.evaluate] 
+
+Evaluating individual 9 on generation 1
+67810 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+67810 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/9/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+67813 DEBUG [txl_operator.compile_project] Compiling new source files
+69413 DEBUG [tester.begin_testing] Performing 5 Test Runs...
+70232 DEBUG [tester.run_test] Test 1 - Successful Execution
+71071 DEBUG [tester.run_test] Test 2 - Successful Execution
+71888 DEBUG [tester.run_test] Test 3 - Successful Execution
+72704 DEBUG [tester.run_test] Test 4 - Successful Execution
+73620 DEBUG [tester.run_test] Test 5 - Successful Execution
+73620 DEBUG [tester.begin_testing] Test Runs Results...
+73621 DEBUG [tester.begin_testing] Successes: 5
+73621 DEBUG [tester.begin_testing] Timeouts: 0
+73621 DEBUG [tester.begin_testing] Dataraces: 0
+73621 DEBUG [tester.begin_testing] Deadlock: 0
+73621 DEBUG [tester.begin_testing] Errors: 0
+73621 DEBUG [tester.begin_testing] Real Time: []
+73621 DEBUG [tester.begin_testing] Wall Time: []
+73621 DEBUG [tester.begin_testing] Voluntary Switches: []
+73622 DEBUG [tester.begin_testing] Involuntary Switches: []
+73622 DEBUG [tester.begin_testing] Percent CPU: []
+73622 DEBUG [tester.begin_testing] Good Runs: [True, True, True, True, True]
+73622 INFO [evolution.evaluate] 
+
+Evaluating individual 10 on generation 1
+73622 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+73623 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/10/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+73625 DEBUG [txl_operator.compile_project] Compiling new source files
+75200 DEBUG [tester.begin_testing] Performing 5 Test Runs...
+76021 DEBUG [tester.run_test] Test 1 - Error in Execution
+76836 DEBUG [tester.run_test] Test 2 - Successful Execution
+77653 DEBUG [tester.run_test] Test 3 - Error in Execution
+78473 DEBUG [tester.run_test] Test 4 - Successful Execution
+79287 DEBUG [tester.run_test] Test 5 - Error in Execution
+79287 DEBUG [tester.begin_testing] Test Runs Results...
+79288 DEBUG [tester.begin_testing] Successes: 2
+79288 DEBUG [tester.begin_testing] Timeouts: 0
+79288 DEBUG [tester.begin_testing] Dataraces: 0
+79288 DEBUG [tester.begin_testing] Deadlock: 0
+79288 DEBUG [tester.begin_testing] Errors: 3
+79288 DEBUG [tester.begin_testing] Real Time: []
+79288 DEBUG [tester.begin_testing] Wall Time: []
+79288 DEBUG [tester.begin_testing] Voluntary Switches: []
+79289 DEBUG [tester.begin_testing] Involuntary Switches: []
+79289 DEBUG [tester.begin_testing] Percent CPU: []
+79289 DEBUG [tester.begin_testing] Good Runs: [False, True, False, True, False]
+79289 INFO [evolution.convergence] Average fitness hasn't moved by 0.01 in 0 generations
+79289 INFO [evolution.start] **************************************************
+79289 INFO [evolution.start] Best individual found during the bug fixing phase:
+79290 INFO [evolution.start]  -----Individual-----
+ Op1: [0][0][0][0][0][0][0][0][0][0]
+ Op2: [0][0][0][1][0][0]
+ Op3: [0]
+ Op4: [0]
+ Op5: 
+ Op6: 
+ Op7: 
+ Op8: 
+
+ Id: 9
+ Generation: 1
+ Switch Generation: 1
+ Last Operator: ['ASM', True, True, True, '/Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/src/_txl/ASM.Txl']
+ Applied Operators: ['ASM']
+ Successes: [5]
+ Real Time: []
+ Wall Time: []
+ Voluntary Switches: []
+ Involuntary Switches: []
+ Percent CPU []
+ Score: [500]
+
+79290 INFO [evolution.start] **************************************************
+79290 INFO [evolution.start] 
+79290 DEBUG [evolution.start] Repopulating with best individual 9 at generation 1
+79290 DEBUG [evolution.initialize] Cloning best functional individual 9 into individual 1
+79290 DEBUG [evolution.initialize] Cloning best functional individual 9 into individual 2
+79291 DEBUG [evolution.initialize] Cloning best functional individual 9 into individual 3
+79291 DEBUG [evolution.initialize] Cloning best functional individual 9 into individual 4
+79291 DEBUG [evolution.initialize] Cloning best functional individual 9 into individual 5
+79291 DEBUG [evolution.initialize] Cloning best functional individual 9 into individual 6
+79291 DEBUG [evolution.initialize] Cloning best functional individual 9 into individual 7
+79291 DEBUG [evolution.initialize] Cloning best functional individual 9 into individual 8
+79292 DEBUG [evolution.initialize] Cloning best functional individual 9 into individual 9
+79292 DEBUG [evolution.initialize] Cloning best functional individual 9 into individual 10
+79292 DEBUG [txl_operator.copy_local_project_a_to_b] Gen: 1 Mem: 9  ->  Gen: 1 Mem: 1 
+79292 DEBUG [txl_operator.copy_local_project_a_to_b] Copying a local project from A to B:
+79293 DEBUG [txl_operator.copy_local_project_a_to_b] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/9/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/1/project/
+79295 DEBUG [txl_operator.copy_local_project_a_to_b] Gen: 1 Mem: 9  ->  Gen: 1 Mem: 2 
+79295 DEBUG [txl_operator.copy_local_project_a_to_b] Copying a local project from A to B:
+79295 DEBUG [txl_operator.copy_local_project_a_to_b] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/9/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/2/project/
+79298 DEBUG [txl_operator.copy_local_project_a_to_b] Gen: 1 Mem: 9  ->  Gen: 1 Mem: 3 
+79298 DEBUG [txl_operator.copy_local_project_a_to_b] Copying a local project from A to B:
+79298 DEBUG [txl_operator.copy_local_project_a_to_b] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/9/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/3/project/
+79301 DEBUG [txl_operator.copy_local_project_a_to_b] Gen: 1 Mem: 9  ->  Gen: 1 Mem: 4 
+79302 DEBUG [txl_operator.copy_local_project_a_to_b] Copying a local project from A to B:
+79302 DEBUG [txl_operator.copy_local_project_a_to_b] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/9/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/4/project/
+79331 DEBUG [txl_operator.copy_local_project_a_to_b] Gen: 1 Mem: 9  ->  Gen: 1 Mem: 5 
+79332 DEBUG [txl_operator.copy_local_project_a_to_b] Copying a local project from A to B:
+79332 DEBUG [txl_operator.copy_local_project_a_to_b] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/9/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/5/project/
+79335 DEBUG [txl_operator.copy_local_project_a_to_b] Gen: 1 Mem: 9  ->  Gen: 1 Mem: 6 
+79335 DEBUG [txl_operator.copy_local_project_a_to_b] Copying a local project from A to B:
+79335 DEBUG [txl_operator.copy_local_project_a_to_b] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/9/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/6/project/
+79337 DEBUG [txl_operator.copy_local_project_a_to_b] Gen: 1 Mem: 9  ->  Gen: 1 Mem: 7 
+79337 DEBUG [txl_operator.copy_local_project_a_to_b] Copying a local project from A to B:
+79338 DEBUG [txl_operator.copy_local_project_a_to_b] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/9/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/7/project/
+79340 DEBUG [txl_operator.copy_local_project_a_to_b] Gen: 1 Mem: 9  ->  Gen: 1 Mem: 8 
+79340 DEBUG [txl_operator.copy_local_project_a_to_b] Copying a local project from A to B:
+79340 DEBUG [txl_operator.copy_local_project_a_to_b] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/9/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/8/project/
+79342 DEBUG [txl_operator.copy_local_project_a_to_b] Gen: 1 Mem: 9  ->  Gen: 1 Mem: 10 
+79343 DEBUG [txl_operator.copy_local_project_a_to_b] Copying a local project from A to B:
+79343 DEBUG [txl_operator.copy_local_project_a_to_b] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/9/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/10/project/
+79345 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+79345 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/tmp/1/9/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/
+79347 DEBUG [txl_operator.compile_project] Compiling new source files
+80990 DEBUG [tester.begin_testing] Performing 15 Test Runs...
+81096 DEBUG [tester.run_test] Test 1 - Error in Execution
+81204 DEBUG [tester.run_test] Test 2 - Error in Execution
+81312 DEBUG [tester.run_test] Test 3 - Error in Execution
+81420 DEBUG [tester.run_test] Test 4 - Error in Execution
+81528 DEBUG [tester.run_test] Test 5 - Error in Execution
+81635 DEBUG [tester.run_test] Test 6 - Error in Execution
+81743 DEBUG [tester.run_test] Test 7 - Error in Execution
+81850 DEBUG [tester.run_test] Test 8 - Error in Execution
+81957 DEBUG [tester.run_test] Test 9 - Error in Execution
+82065 DEBUG [tester.run_test] Test 10 - Error in Execution
+82172 DEBUG [tester.run_test] Test 11 - Error in Execution
+82280 DEBUG [tester.run_test] Test 12 - Error in Execution
+82387 DEBUG [tester.run_test] Test 13 - Error in Execution
+82495 DEBUG [tester.run_test] Test 14 - Error in Execution
+82603 DEBUG [tester.run_test] Test 15 - Error in Execution
+82604 DEBUG [tester.begin_testing] Test Runs Results...
+82604 DEBUG [tester.begin_testing] Successes: 0
+82604 DEBUG [tester.begin_testing] Timeouts: 0
+82604 DEBUG [tester.begin_testing] Dataraces: 0
+82605 DEBUG [tester.begin_testing] Deadlock: 0
+82605 DEBUG [tester.begin_testing] Errors: 15
+82605 DEBUG [tester.begin_testing] Real Time: []
+82605 DEBUG [tester.begin_testing] Wall Time: []
+82605 DEBUG [tester.begin_testing] Voluntary Switches: []
+82605 DEBUG [tester.begin_testing] Involuntary Switches: []
+82605 DEBUG [tester.begin_testing] Percent CPU: []
+82605 DEBUG [tester.begin_testing] Good Runs: [False, False, False, False, False, False, False, False, False, False, False, False, False, False, False]
+82608 DEBUG [txl_operator.restore_project] Restoring (global) project:
+82608 DEBUG [txl_operator.restore_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/project_backup/ 
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/12/input/source/

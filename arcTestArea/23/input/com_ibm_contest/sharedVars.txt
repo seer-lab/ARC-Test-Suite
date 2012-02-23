@@ -1,0 +1,8 @@
+MergeSort.bIsInit
+MergeSort.m_iArray
+MergeSort.m_iThreadLimit
+MergeSort.m_iCurrentThreadsAlive
+MergeSort.OperatedCorrectly
+MergeSort.outputFile
+MergeSort.fWriter
+MergeSort.bWriter

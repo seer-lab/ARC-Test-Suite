@@ -1,1 +1,1 @@
-< FAILURE! out2.txt , Concurency=average , Bug occurred >
+< FAILURE! out2.txt , Concurency=average , sold: 91 Bug occurred >

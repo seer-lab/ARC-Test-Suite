@@ -1,1 +1,1 @@
-<BoundedBuffer,Threads in infinite loop: -40 out of: 3, notify instead notifyAll>
+<BoundedBuffer,Threads in infinite loop: 3 out of: 3, notify instead notifyAll>

@@ -17,11 +17,13 @@ public class AirlineBug implements Runnable
   Thread threadArr[];
   FileOutputStream output;
   private String fileName;
-  boolean BugOccurred = false;
+  boolean OperatedCorrectly = false;
     
   public boolean AirBug (String fileName, String Concurency)
   {
     this.fileName = fileName;
+
+    Num_Of_Seats_Sold = 0; // DK
 
     try 
     {
@@ -41,6 +43,7 @@ public class AirlineBug implements Runnable
 
     // issuing 10% more tickets for sale
     Maximum_Capacity = Num_of_tickets_issued - (Num_of_tickets_issued)/10 ; 
+
     threadArr = new Thread[Num_of_tickets_issued];
 
     System.out.println( "The airline issued "+ Num_of_tickets_issued 
@@ -78,13 +81,17 @@ public class AirlineBug implements Runnable
     {
       e.printStackTrace(); 
     }
-    String str1="< SUCCESS! " +fileName+ " , Concurency="+Concurency+" , "+"No Bug"+" >";
-    String str2="< FAILURE! "+fileName+" , Concurency="+Concurency+" , "+"Bug occurred"+" >";
 
+    String str1="< SUCCESS! " +fileName+ " , Concurency="+Concurency+" , sold: " + Num_Of_Seats_Sold
+      +" No Bug"+" >\n";
+    String str2="< FAILURE! "+fileName+" , Concurency="+Concurency+" , sold: " + Num_Of_Seats_Sold
+      +" Bug occurred"+" >\n";
+
+    // Didn't work
     if (Num_Of_Seats_Sold > Maximum_Capacity)
       try 
       {
-        BugOccurred = true;
+        OperatedCorrectly = false;
         System.out.println(str2);
         output.write(str2.getBytes());
       } 
@@ -92,9 +99,10 @@ public class AirlineBug implements Runnable
       {
         e.printStackTrace();  
       }
-    else
+    else   // Worked
       try 
       {
+        OperatedCorrectly = true;
         System.out.println(str1);
         output.write(str1.getBytes());
       } 
@@ -103,7 +111,7 @@ public class AirlineBug implements Runnable
         e.printStackTrace(); 
       }
     
-    return BugOccurred;
+    return OperatedCorrectly;
   } // method bug
 /**
  * the selling post:
@@ -111,7 +119,6 @@ public class AirlineBug implements Runnable
  */
   public void run() 
   {
-
     Num_Of_Seats_Sold++;       // making the sale
 
     if (Num_Of_Seats_Sold > Maximum_Capacity)  // checking

@@ -1,1 +1,1 @@
-< FAILURE! out3.txt , Concurency=little , Bug occurred >
+< FAILURE! out3.txt , Concurency=little , sold: 10 Bug occurred >

@@ -1,0 +1,43 @@
+132 INFO [contester._check_tools] Checking if txl is present
+152 INFO [contester._check_tools] Checking if ConTest is present
+152 INFO [contester._check_tools] Checking if ConTest's KingProperties is present
+153 INFO [contester._check_tools] All Pass
+153 INFO [contester.setup] Configuring ConTest's KingProperties file
+170 DEBUG [txl_operator.backup_project] Backing up (global) project:
+170 DEBUG [txl_operator.backup_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/08/input/source/ 
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/08/project_backup/
+202 INFO [evolution.start] Creating and initializing the population
+202 DEBUG [evolution.initialize] Creating individual 1
+203 DEBUG [evolution.initialize] Creating individual 2
+203 DEBUG [evolution.initialize] Creating individual 3
+203 DEBUG [evolution.initialize] Creating individual 4
+203 DEBUG [evolution.initialize] Creating individual 5
+203 DEBUG [evolution.initialize] Creating individual 6
+203 DEBUG [evolution.initialize] Creating individual 7
+203 DEBUG [evolution.initialize] Creating individual 8
+203 DEBUG [evolution.initialize] Creating individual 9
+203 DEBUG [evolution.initialize] Creating individual 10
+203 INFO [evolution.start] Evolving population towards functional correctness
+204 DEBUG [evolution.mutation] 
+
+Mutating individual 1 at generation 1
+1611 DEBUG [txl_operator.generate_representation] Arguments received: 1 1
+1619 DEBUG [evolution.feedback_selection] Voting for functional phase with dataraces: [7, 7, 7, 7, 7, 7, 7]
+1620 DEBUG [evolution.mutation] No mutations at operatorIndex 7
+1620 DEBUG [evolution.feedback_selection] Voting for functional phase with dataraces: [7, 7, 7, 7, 7, 7, 7]
+1620 DEBUG [txl_operator.create_local_project] Input arguments:  Gen: 1, Mem: 1 and Restart: False
+1620 DEBUG [txl_operator.create_local_project] Creating local project:
+1620 DEBUG [txl_operator.create_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/08/project_backup/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/08/tmp/1/1/project/
+1627 DEBUG [txl_operator.move_mutant_to_local_project] Op: ASAV -> Gen: 1 Mem: 1 
+1627 DEBUG [txl_operator.move_mutant_to_local_project] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/08/tmp/1/1/SyncWriter/ASAV/ASAV_SyncWriter.java_5/SyncWriter.java 
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/08/tmp/1/1/project/SyncWriter.java
+1628 DEBUG [txl_operator.move_local_project_to_original] Moving local project to original:
+1628 DEBUG [txl_operator.move_local_project_to_original] 
+Src: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/08/tmp/1/1/project/
+Dst: /Users/kelk/workspace/ARC-Test-Suite/arcTestArea/08/input/source/
+1635 DEBUG [evolution.mutation] Attempting to compile...
+1635 DEBUG [txl_operator.compile_project] Compiling new source files

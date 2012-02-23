@@ -1,0 +1,6 @@
+Account.random
+Account.MAX_SUM
+Account.Account_Id
+Bank.accounts
+Account.Balance
+Bank.Bank_Total

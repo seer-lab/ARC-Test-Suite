@@ -43,9 +43,12 @@ public class TestThread1 extends Thread {
     try {
       // Allocating 'resultBuf.length' blocks.
       for (int i = 0; i < resultBuf.length; i++) {
-        resultBuf[i] = vector.getFreeBlockIndex();
-        if (resultBuf[i] != -1) {
-          vector.markAsAllocatedBlock(resultBuf[i]);
+        // -----------------------------------
+        // Bug: getFreeBlockIndex and markAsAllocatedBlock need to
+        // run without interruption/preemption
+          resultBuf[i] = vector.getFreeBlockIndex();
+          if (resultBuf[i] != -1) {
+            vector.markAsAllocatedBlock(resultBuf[i]);
         }
       }
 
