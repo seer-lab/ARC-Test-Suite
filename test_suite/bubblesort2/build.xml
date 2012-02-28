@@ -38,8 +38,13 @@
     </javac>
   </target>
 
-  <target name="compile-part2" >
-    <javac srcdir="${src}" destdir="${class}"/>
+  <target name="compile-part2" depends="init"
+        description="compile the source " >
+    <!-- Compile the java code from ${src} into ${build} -->
+    <mkdir dir="${class}" />
+    <javac srcdir="${src}" 
+           destdir="${class}"
+           />
   </target>
 
   <target name="test" depends="compile" >

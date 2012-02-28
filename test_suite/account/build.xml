@@ -39,6 +39,7 @@
   </target>
 
   <target name="compile-part2" >
+    <mkdir dir="${class}" />
     <javac srcdir="${src}" destdir="${class}"/>
   </target>
 
