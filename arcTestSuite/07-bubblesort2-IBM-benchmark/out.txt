@@ -1,1 +1,0 @@
-SortProgram finished with 20 bugs <Initialization-Sleep Pattern>>

@@ -1,1 +1,0 @@
-<Account program,FAILURE!: There is amount with less than 300, No Lock>
