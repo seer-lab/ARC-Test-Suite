@@ -3,8 +3,9 @@ WORKING_DIR=`pwd`
 TEST_SUITE="$WORKING_DIR/test_suite"
 ARC="$WORKING_DIR/test_area/arc"
 TEST_RESULTS="$WORKING_DIR/test_results"
+RUN="1"
 
-echo "::Starting ARC testing the ARC-Test-Suite"
+echo "::Starting ARC Testing (Run $RUN) using the ARC-Test-Suite"
 
 # Iterate over all the tests and work through them
 cd $TEST_SUITE
@@ -20,12 +21,12 @@ do
 
   echo "::Executing ARC for Test $test"
   cd $ARC/src
-  $PYTHON arc.py
+  time $PYTHON arc.py
 
   echo "::Moving $test Results to test_results"
-  mkdir $TEST_RESULTS/$test
-  cp $ARC/src/log.txt $TEST_RESULTS/$test/  # Log File
-  cp -R $ARC/output $TEST_RESULTS/$test  # Solution Program
+  mkdir -p $TEST_RESULTS/$test/$RUN
+  cp $ARC/src/log.txt $TEST_RESULTS/$test/$RUN/  # Log File
+  cp -R $ARC/output $TEST_RESULTS/$test/$RUN  # Solution Program
 
 	echo "::Cleaning up ARC for next test"
 	cd $WORKING_DIR
