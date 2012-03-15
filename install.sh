@@ -1,7 +1,7 @@
 echo "::Acquiring ARC from GitHub (Using SSH, requires access and credentials)"
 git clone git@github.com:sqrg-uoit/arc.git test_area/arc
 cd test_area/arc
-git checkout 1f112576e85d9d189e36665b75f25b43ebe05cb7  # May not be required eventually
+git checkout aaaae89bddeba4df6dcaf2f7f236ef100afeac7a  # May not be required eventually
 cd ../..
 
 mkdir test_area/arc/lib

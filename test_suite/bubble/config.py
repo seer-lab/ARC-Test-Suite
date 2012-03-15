@@ -18,14 +18,14 @@ _LOG_FILE = "log.txt"  # If None then use stdout, otherwise specify a file
 _RANDOM_SEED = None  # None means use the system time, non-zero is fixed
 
 # Target project variables
-_PROJECT_DIR = _ROOT_DIR + "input/deadlock/"
+_PROJECT_DIR = _ROOT_DIR + "input/bubble/"
 _PROJECT_SRC_DIR = _PROJECT_DIR + "source/"
 _PROJECT_TEST_DIR = _PROJECT_DIR + "test/"
 _PROJECT_CLASS_DIR = _PROJECT_DIR + "class/"
 _PROJECT_BACKUP_DIR = _ROOT_DIR + "project_backup/"
 _PROJECT_OUTPUT_DIR = _ROOT_DIR + "output/"
-_PROJECT_PREFIX = "deadLock,file"  # Comma separated fully-qualifying class names or package prefixes
-_PROJECT_TESTSUITE = "DeadlockTest"
+_PROJECT_PREFIX = "BubbleSort,OneBubble,Reporter,SoftWareVerificationHW"  # Comma separated fully-qualifying class names or package prefixes
+_PROJECT_TESTSUITE = "BubbleSortTest"
 _PROJECT_COMPILE = "compile"
 _PROJECT_CLASSPATH = _PROJECT_CLASS_DIR + ":" + _PROJECT_DIR + "test/"
 _PROJECT_TEST_MB = 2000

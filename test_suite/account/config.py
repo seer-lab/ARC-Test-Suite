@@ -13,7 +13,7 @@ _MAX_CORES = 2
 _TMP_DIR = _ROOT_DIR + "tmp/"
 _TXL_DIR = _ROOT_DIR + "src/_txl/"
 _JUNIT_JAR = _ROOT_DIR + "lib/junit-4.8.1.jar"
-_VERBOSE = False
+_VERBOSE = True
 _LOG_FILE = "log.txt"  # If None then use stdout, otherwise specify a file
 _RANDOM_SEED = None  # None means use the system time, non-zero is fixed
 
@@ -29,14 +29,15 @@ _PROJECT_TESTSUITE = "AccountTest"
 _PROJECT_COMPILE = "compile"
 _PROJECT_CLASSPATH = _PROJECT_CLASS_DIR + ":" + _PROJECT_DIR + "test/"
 _PROJECT_TEST_MB = 2000
+_SHARED_VARS_FILE = _PROJECT_DIR + "com_ibm_contest/sharedVars.txt"
 # TODO Consider some automatic way to figure classpath if Ant or MVN exist
 
 # ConTest variables
 _CONTEST_DIR = _ROOT_DIR + "lib/ConTest/"
 _CONTEST_KINGPROPERTY = _CONTEST_DIR + "KingProperties"
 _CONTEST_JAR = _CONTEST_DIR + "ConTest.jar"
-_CONTEST_RUNS = 30
-_CONTEST_TIMEOUT_SEC = 10 # Aim for around x2-3 desirable performance
+_CONTEST_RUNS = 5
+_CONTEST_TIMEOUT_SEC = 3 # Aim for around x2-3 desirable performance
 _CONTEST_VALIDATION_MULTIPLIER = 10  # Allows for validation of functionality 
 _TESTSUITE_AVG = 3  # Number of test executions for finding the average time
 
@@ -44,31 +45,35 @@ _TESTSUITE_AVG = 3  # Number of test executions for finding the average time
 # [0]Name  [1]Enable  [2]DataRace  [3]Deadlock  [4]File
 _MUTATION_ASAS = ['ASAS', True, True, True, _TXL_DIR + "ASAS.Txl"]
 _MUTATION_ASAV = ['ASAV', True, True, True, _TXL_DIR + "ASAV.Txl"]
+_MUTATION_ASIM = ['ASIM', True, True, True, _TXL_DIR + "ASIM.Txl"]
 _MUTATION_ASM  = ['ASM', True, True, True, _TXL_DIR + "ASM.Txl"]
 _MUTATION_CSO  = ['CSO', True, False, True, _TXL_DIR + "CSO.Txl"]
 _MUTATION_EXSB = ['EXSB', True, True, True, _TXL_DIR + "EXSB.Txl"]
 _MUTATION_EXSA = ['EXSA', True, True, True, _TXL_DIR + "EXSA.Txl"]
 _MUTATION_RSAS = ['RSAS', True, True, True, _TXL_DIR + "RSAS.Txl"]
 _MUTATION_RSAV = ['RSAV', True, True, True, _TXL_DIR + "RSAV.Txl"]
+_MUTATION_RSIM = ['RSIM', True, True, True, _TXL_DIR + "RSIM.Txl"]
 _MUTATION_RSM  = ['RSM', True, True, True, _TXL_DIR + "RSM.Txl"]
 _MUTATION_SHSA = ['SHSA', True, True, True, _TXL_DIR + "SHSA.Txl"]
 _MUTATION_SHSB = ['SHSB', True, True, True, _TXL_DIR + "SHSB.Txl"]
-_FUNCTIONAL_MUTATIONS = [_MUTATION_ASAS, _MUTATION_ASAV, _MUTATION_ASM,
-                         _MUTATION_CSO, _MUTATION_EXSB, _MUTATION_EXSA,
-                         _MUTATION_RSAS, _MUTATION_RSAV, _MUTATION_RSM]
-_NONFUNCTIONAL_MUTATIONS = [_MUTATION_RSAS, _MUTATION_RSAV, _MUTATION_RSM,
-                            _MUTATION_SHSA, _MUTATION_SHSB]
-_ALL_MUTATIONS = [_MUTATION_ASAS, _MUTATION_ASAV, _MUTATION_ASM,
-                         _MUTATION_CSO, _MUTATION_EXSB, _MUTATION_EXSA,
-                         _MUTATION_RSAS, _MUTATION_RSAV, _MUTATION_RSM,
-                         _MUTATION_SHSA, _MUTATION_SHSB]
+_FUNCTIONAL_MUTATIONS = [_MUTATION_ASAS, _MUTATION_ASAV, _MUTATION_ASIM,
+                         _MUTATION_ASM, _MUTATION_CSO, _MUTATION_EXSB,
+                         _MUTATION_EXSA, _MUTATION_RSAS, _MUTATION_RSAV,
+                         _MUTATION_RSIM, _MUTATION_RSM]
+_NONFUNCTIONAL_MUTATIONS = [_MUTATION_RSAS, _MUTATION_RSAV, _MUTATION_RSIM,
+                            _MUTATION_RSM, _MUTATION_SHSA, _MUTATION_SHSB]
+_ALL_MUTATIONS = [_MUTATION_ASAS, _MUTATION_ASAV, _MUTATION_ASIM,
+                         _MUTATION_ASM, _MUTATION_CSO, _MUTATION_EXSB,
+                         _MUTATION_EXSA, _MUTATION_RSAS, _MUTATION_RSAV,
+                         _MUTATION_RSIM, _MUTATION_RSM, _MUTATION_SHSA,
+                         _MUTATION_SHSB]
 
 # Enable random mutation
 _RANDOM_MUTATION = False
 
 # Evolution variables
-_EVOLUTION_GENERATIONS = 5
-_EVOLUTION_POPULATION = 2
+_EVOLUTION_GENERATIONS = 20
+_EVOLUTION_POPULATION = 10
 _EVOLUTION_REPLACE_LOWEST_PERCENT = 10
 _EVOLUTION_REPLACE_INTERVAL = 2  # Consider replacement on this generational interval
 _EVOLUTION_REPLACE_WEAK_MIN_TURNS = 1  # Min number of turns of underperforming before replacement
@@ -95,9 +100,9 @@ else:
   handler = logging.FileHandler(_LOG_FILE, "w");
 
 if _VERBOSE:
-    logger.setLevel(logging.DEBUG)
+  logger.setLevel(logging.DEBUG)
 else:
-    logger.setLevel(logging.INFO)
+  logger.setLevel(logging.INFO)
 
 formatter = logging.Formatter('%(relativeCreated)d %(levelname)s [%(module)s.%(funcName)s] %(message)s')
 handler.setFormatter(formatter)
