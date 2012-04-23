@@ -27,10 +27,10 @@ do
   mkdir -p $TEST_RESULTS/$test/$RUN
   cp $ARC/src/log.txt $TEST_RESULTS/$test/$RUN/  # Log File
   cp -R $ARC/output $TEST_RESULTS/$test/$RUN  # Solution Program
+  cp -R $ARC/tmp $TEST_RESULTS/$test/$RUN  # Tmp Directory
 
 	echo "::Cleaning up ARC for next test"
 	cd $WORKING_DIR
-	rm -R $ARC/tmp
 	rm -R $ARC/output
 	rm -R $ARC/project_backup
 	rm $ARC/src/log.txt
