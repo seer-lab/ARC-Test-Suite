@@ -1,7 +1,0 @@
-BuggyProgram.numOfUsers
-BuggyProgram.ALock
-BuggyProgram.generated
-BuggyProgram$User.userNumber
-BuggyProgram.randomNumber
-BuggyProgram.history
-BuggyProgram.presented

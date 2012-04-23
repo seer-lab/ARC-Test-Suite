@@ -1,8 +1,0 @@
-Checker._buf
-Checker._writtenCount
-Buffer._pos
-Writer._buf
-Buffer._size
-Buffer._array
-Writer._writeVal
-Buffer._count
