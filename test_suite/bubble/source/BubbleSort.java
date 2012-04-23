@@ -82,11 +82,11 @@ public class BubbleSort
 
                 // DK: Fix commented out for obvious reasons
                 // Note: ARC doesn't parse comments so it can't take advantage of this
-                /*ob.start();// bubbling up the next highest number
-                try{
-                ob.join();}
-                catch(java.lang.InterruptedException e)
-                {}*/
+                ob.start();// bubbling up the next highest number
+                // try{
+                // ob.join();}
+                // catch(java.lang.InterruptedException e)
+                // {}
             }
         }
     }
