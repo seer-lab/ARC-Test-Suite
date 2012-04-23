@@ -13,7 +13,7 @@ _MAX_CORES = 2
 _TMP_DIR = _ROOT_DIR + "tmp/"
 _TXL_DIR = _ROOT_DIR + "src/_txl/"
 _JUNIT_JAR = _ROOT_DIR + "lib/junit-4.8.1.jar"
-_VERBOSE = True
+_LOG_LEVEL = "INFO"  # {OFF,ERROR,WARN,INFO,DEBUG}
 _LOG_FILE = "log.txt"  # If None then use stdout, otherwise specify a file
 _RANDOM_SEED = None  # None means use the system time, non-zero is fixed
 
@@ -37,8 +37,8 @@ _CONTEST_DIR = _ROOT_DIR + "lib/ConTest/"
 _CONTEST_KINGPROPERTY = _CONTEST_DIR + "KingProperties"
 _CONTEST_JAR = _CONTEST_DIR + "ConTest.jar"
 _CONTEST_RUNS = 10
-_CONTEST_TIMEOUT_SEC = 30 # Default timeout, it is adjusted dynamically
-_CONTEST_TIMEOUT_MULTIPLIER = 3  # The average execution time (with conTest) is multiplied by this
+_CONTEST_TIMEOUT_SEC = 60 # Default timeout, it is adjusted dynamically
+_CONTEST_TIMEOUT_MULTIPLIER = 10  # The average execution time (with conTest) is multiplied by this
 _CONTEST_VALIDATION_MULTIPLIER = 10  # Allows for validation of functionality
 
 # Mutation operator variables
@@ -72,8 +72,8 @@ _ALL_MUTATIONS = [_MUTATION_ASAS, _MUTATION_ASAV, _MUTATION_ASIM,
 _RANDOM_MUTATION = False
 
 # Evolution variables
-_EVOLUTION_GENERATIONS = 50
-_EVOLUTION_POPULATION = 20
+_EVOLUTION_GENERATIONS = 30
+_EVOLUTION_POPULATION = 30
 _EVOLUTION_REPLACE_LOWEST_PERCENT = 10
 _EVOLUTION_REPLACE_INTERVAL = 5  # Consider replacement on this generational interval
 _EVOLUTION_REPLACE_WEAK_MIN_TURNS = 3  # Min number of turns of underperforming before replacement
@@ -99,10 +99,7 @@ if _LOG_FILE is None:
 else:
   handler = logging.FileHandler(_LOG_FILE, "w");
 
-if _VERBOSE:
-  logger.setLevel(logging.DEBUG)
-else:
-  logger.setLevel(logging.INFO)
+logger.setLevel(_LOG_LEVEL)
 
 formatter = logging.Formatter('%(relativeCreated)d %(levelname)s [%(module)s.%(funcName)s] %(message)s')
 handler.setFormatter(formatter)
