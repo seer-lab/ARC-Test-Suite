@@ -1,5 +1,0 @@
-ManageAccount.account
-Account.amount
-ManageAccount.accounts
-ManageAccount.i
-ManageAccount.num
