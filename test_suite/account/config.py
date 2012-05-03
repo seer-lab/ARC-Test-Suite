@@ -37,9 +37,9 @@ _CONTEST_DIR = _ROOT_DIR + "lib/ConTest/"
 _CONTEST_KINGPROPERTY = _CONTEST_DIR + "KingProperties"
 _CONTEST_JAR = _CONTEST_DIR + "ConTest.jar"
 _CONTEST_RUNS = 10
-_CONTEST_TIMEOUT_SEC = 60 # Default timeout, it is adjusted dynamically
+_CONTEST_TIMEOUT_SEC = 300 # Default timeout, it is adjusted dynamically
 _CONTEST_TIMEOUT_MULTIPLIER = 10  # The average execution time (with conTest) is multiplied by this
-_CONTEST_VALIDATION_MULTIPLIER = 10  # Allows for validation of functionality
+_CONTEST_VALIDATION_MULTIPLIER = 15  # Allows for validation of functionality
 
 # Mutation operator variables
 # [0]Name  [1]Enable  [2]DataRace  [3]Deadlock  [4]File
@@ -70,6 +70,9 @@ _ALL_MUTATIONS = [_MUTATION_ASAS, _MUTATION_ASAV, _MUTATION_ASIM,
 
 # Enable random mutation
 _RANDOM_MUTATION = False
+
+# Only perform functional phase
+_ONLY_FUNCTIONAL = False
 
 # Evolution variables
 _EVOLUTION_GENERATIONS = 30
