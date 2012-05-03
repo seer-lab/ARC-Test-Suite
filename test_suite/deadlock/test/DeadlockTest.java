@@ -6,27 +6,27 @@ public class DeadlockTest extends TestCase {
   	return new TestSuite(DeadlockTest.class);
   }
 
-  // public void testAllocationLot() throws Exception {
-  //   deadLock AB = new deadLock();
-  //   boolean result = false;
-  //   String[] input = new String[2];
-  //   input[0] = "out1.txt";
-  //   input[1] = "lot";
-  //   result = AB.main(input);
-  //   assertTrue(result);
-  // }
+  public void testDeadlockLot() throws Exception {
+    deadLock AB = new deadLock();
+    boolean result = false;
+    String[] input = new String[2];
+    input[0] = "out1.txt";
+    input[1] = "lot";
+    result = AB.main(input);
+    assertTrue(result);
+  }
 
-  // public void testAllocationAverage() throws Exception {
-  //   deadLock AB2 = new deadLock();
-  //   boolean result = false;
-  //   String[] input = new String[2];
-  //   input[0] = "out2.txt";
-  //   input[1] = "average";
-  //   result = AB2.main(input);
-  //   assertTrue(result);
-  // }
+  public void testDeadlockAverage() throws Exception {
+    deadLock AB2 = new deadLock();
+    boolean result = false;
+    String[] input = new String[2];
+    input[0] = "out2.txt";
+    input[1] = "average";
+    result = AB2.main(input);
+    assertTrue(result);
+  }
 
-  public void testAllocationLittle() throws Exception {
+  public void testDeadlockLittle() throws Exception {
     deadLock AB3 = new deadLock();
     boolean result = false;
     String[] input = new String[2];

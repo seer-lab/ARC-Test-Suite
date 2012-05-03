@@ -6,27 +6,27 @@ public class AccountsTest extends TestCase {
   	return new TestSuite(AccountsTest.class);
   }
 
-  // public void testAllocationLot() throws Exception {
-  //   Bank AB = new Bank();
-  //   boolean result = false;
-  //   String[] input = new String[2];
-  //   input[0] = "out1.txt";
-  //   input[1] = "lot";
-  //   result = AB.main(input);
-  //   assertTrue(result);
-  // }
+  public void testAccountsLot() throws Exception {
+    Bank AB = new Bank();
+    boolean result = false;
+    String[] input = new String[2];
+    input[0] = "out1.txt";
+    input[1] = "lot";
+    result = AB.main(input);
+    assertTrue(result);
+  }
 
-  // public void testAllocationAverage() throws Exception {
-  //   Bank AB2 = new Bank();
-  //   boolean result = false;
-  //   String[] input = new String[2];
-  //   input[0] = "out2.txt";
-  //   input[1] = "average";
-  //   result = AB2.main(input);
-  //   assertTrue(result);
-  // }
+  public void testAccountsAverage() throws Exception {
+    Bank AB2 = new Bank();
+    boolean result = false;
+    String[] input = new String[2];
+    input[0] = "out2.txt";
+    input[1] = "average";
+    result = AB2.main(input);
+    assertTrue(result);
+  }
 
-  public void testAllocationLittle() throws Exception {
+  public void testAccountsLittle() throws Exception {
     Bank AB3 = new Bank();
     boolean result = false;
     String[] input = new String[2];
