@@ -12,10 +12,10 @@ cd $TEST_SUITE
 for test in *
 do
 
-	echo "::Moving $test to test_area"
-	cp -R $TEST_SUITE/$test $ARC/input
+  echo "::Moving $test to test_area"
+  cp -R $TEST_SUITE/$test $ARC/input
 
-	echo "::Replacing config.py with $test's"
+  echo "::Replacing config.py with $test's"
   cd $ARC
   cp $ARC/input/$test/config.py $ARC/src/config.py
 
@@ -25,16 +25,16 @@ do
 
   echo "::Moving $test Results to test_results"
   mkdir -p $TEST_RESULTS/$test/$RUN
-  cp $ARC/src/log.txt $TEST_RESULTS/$test/$RUN/  # Log File
-  cp -R $ARC/output $TEST_RESULTS/$test/$RUN  # Solution Program
-  cp -R $ARC/tmp $TEST_RESULTS/$test/$RUN  # Tmp Directory
+  mv $ARC/src/log.txt $TEST_RESULTS/$test/$RUN/  # Log File
+  mv $ARC/output $TEST_RESULTS/$test/$RUN  # Solution Program
+  mv $ARC/tmp $TEST_RESULTS/$test/$RUN  # Tmp Directory
 
-	echo "::Cleaning up ARC for next test"
-	cd $WORKING_DIR
-	rm -R $ARC/output
-	rm -R $ARC/project_backup
-	rm $ARC/src/log.txt
-	rm $ARC/src/config.py
+  echo "::Cleaning up ARC for next test"
+  cd $WORKING_DIR
+  rm -R $ARC/output
+  rm -R $ARC/project_backup
+  rm $ARC/src/log.txt
+  rm $ARC/src/config.py
   rm $ARC/src/config.pyc
 
 done

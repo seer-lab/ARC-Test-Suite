@@ -38,7 +38,7 @@ _CONTEST_KINGPROPERTY = _CONTEST_DIR + "KingProperties"
 _CONTEST_JAR = _CONTEST_DIR + "ConTest.jar"
 _CONTEST_RUNS = 10
 _CONTEST_TIMEOUT_SEC = 300 # Default timeout, it is adjusted dynamically
-_CONTEST_TIMEOUT_MULTIPLIER = 10  # The average execution time (with conTest) is multiplied by this
+_CONTEST_TIMEOUT_MULTIPLIER = 15  # The average execution time (with conTest) is multiplied by this
 _CONTEST_VALIDATION_MULTIPLIER = 15  # Allows for validation of functionality
 
 # Mutation operator variables
