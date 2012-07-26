@@ -37,14 +37,13 @@ do
     foo=$( { time $PYTHON arc.py 1>&3 2>&4; } 2>&1 ) # change some_command
     exec 3>&- 4>&-
     echo $foo > $TEST_RESULTS/$test/$OUTDIR/time.txt
-    #time $PYTHON arc.py
 
     echo "::Moving $test Results to test_results"
 
     mv $ARC/src/log.txt $TEST_RESULTS/$test/$OUTDIR/  # Log File
     mv $ARC/src/config.py $TEST_RESULTS/$test/$OUTDIR/ # Config info
     mv $ARC/output $TEST_RESULTS/$test/$OUTDIR  # Solution Program
-    #mv $ARC/tmp $TEST_RESULTS/$test/$OUTDIR  # Tmp Directory
+    mv $ARC/tmp $TEST_RESULTS/$test/$OUTDIR  # Tmp Directory
 
     echo "::Cleaning up ARC for next test"
     cd $WORKING_DIR
