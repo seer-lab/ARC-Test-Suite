@@ -1,4 +1,0 @@
-Bank system started
-End of the week.
-Bank records = 7696, accounts balance = 9658.
-ERROR: records don't match !!!

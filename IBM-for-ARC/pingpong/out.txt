@@ -1,8 +1,0 @@
-In this file you will find the number of the bug appearances accordingly to the number of threads that the bugged program utilized with:
-
-
-************************************
-
-A Lot Of Threads: 
-
-Number Of Threads: 120 Number Of Bugs: 119 bugs. 

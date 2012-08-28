@@ -1,3 +1,0 @@
-Bug Probability Is lot
-
-< GarageManager, (12, 9, 0, 0, 0), Blocking-Critical-Section Bug>

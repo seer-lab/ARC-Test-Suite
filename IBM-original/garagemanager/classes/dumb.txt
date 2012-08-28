@@ -1,3 +1,0 @@
-Bug Probability Is lot
-
-< GarageManager, (7, 0, 0, 4, 7), No-Bug>
