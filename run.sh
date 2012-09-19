@@ -5,7 +5,7 @@ WORKING_DIR=`pwd`
 TEST_SUITE="$WORKING_DIR/test_suite"
 ARC="$WORKING_DIR/test_area/arc"
 TEST_RESULTS="$WORKING_DIR/test_results"
-RUNS="5"
+RUNS="20"
 OUTDIR="1"
 
 echo "::Starting ARC Testing (Run $RUN) using the ARC-Test-Suite"
@@ -42,7 +42,9 @@ do
 
     mv $ARC/src/log.txt $TEST_RESULTS/$test/$OUTDIR/  # Log File
     mv $ARC/src/config.py $TEST_RESULTS/$test/$OUTDIR/ # Config info
+    mkdir $TEST_RESULTS/$test/$OUTDIR/output
     mv $ARC/output $TEST_RESULTS/$test/$OUTDIR  # Solution Program
+    mkdir $TEST_RESULTS/$test/$OUTDIR/tmp
     mv $ARC/tmp $TEST_RESULTS/$test/$OUTDIR  # Tmp Directory
 
     echo "::Cleaning up ARC for next test"
