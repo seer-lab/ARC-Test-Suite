@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 PYTHON="python"  # Python's command for version 2.7
 WORKING_DIR=`pwd`
 TEST_SUITE="$WORKING_DIR/test_suite"
@@ -21,15 +23,16 @@ do
       OUTDIR="$(expr "$OUTDIR" '+' '1')"
     done
 
+    rm -Rf $ARC/input
     echo "::Moving $test to test_area"
     cp -R $TEST_SUITE/$test $ARC/input
 
     echo "::Replacing config.py with $test's"
-    cd $ARC
-    cp $ARC/input/$test/config.py $ARC/src/config.py
+    cp $ARC/input/config.py $ARC/src/
 
     mkdir -p $TEST_RESULTS/$test/$OUTDIR
 
+    rm -Rf $ARC/output
     echo "::Executing ARC for Test $test"
     cd $ARC/src
 
