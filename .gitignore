@@ -1,5 +1,9 @@
 *.class
 *.pyc
+test_area/arc/
+test_area/core/
+test_suite/
+test_results/
 
 # Package Files #
 *.jar
