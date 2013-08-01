@@ -70,6 +70,31 @@ for dirs in os.walk(os.getcwd()).next()[1]:
 
       os.chdir(os.pardir)
 
+    # 4. Look for time gaps in the log file
+    f = open('log.txt')
+    o = open('gap-analysis.txt', 'w')
+
+    lines_list = list()
+    lines_list = f.readlines()
+
+    #print ("Len: {}".format(len(lines_list)))
+    for i in range (1, len(lines_list)):
+      #print lines_list[i]
+      line1 = re.search("\A\d+", lines_list[i - 1])
+      line2 = re.search("\A\d+", lines_list[i])
+      if line1 is None or line2 is None:
+        continue
+
+      #print ("Comparing {} and {}".format(line2, line1))
+      if (int(line2.group(0)) - int(line1.group(0)) > 30000):
+
+        o.writelines(lines_list[i - 1])
+        o.writelines(lines_list[i])
+        o.writelines("\n")
+
+    f.close()
+    o.close()
+
     # We're done with this program. Move on to the next
     os.chdir(os.pardir)
 
