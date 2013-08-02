@@ -86,11 +86,12 @@ for dirs in os.walk(os.getcwd()).next()[1]:
         continue
 
       #print ("Comparing {} and {}".format(line2, line1))
-      if (int(line2.group(0)) - int(line1.group(0)) > 30000):
+      gap = int(line2.group(0)) - int(line1.group(0))
+      if gap > 30000:
 
         o.writelines(lines_list[i - 1])
         o.writelines(lines_list[i])
-        o.writelines("\n")
+        o.writelines("Difference: {}\n".format(gap))
 
     f.close()
     o.close()
