@@ -7,6 +7,8 @@ Considering only successful fixes:
    output directory.
 3. Determine the average generation that the fix is found in.
 
+Copyright David Kelk 2013
+
 """
 
 import subprocess
@@ -77,18 +79,14 @@ for dirs in os.walk(os.getcwd()).next()[1]:
     lines_list = list()
     lines_list = f.readlines()
 
-    #print ("Len: {}".format(len(lines_list)))
     for i in range (1, len(lines_list)):
-      #print lines_list[i]
       line1 = re.search("\A\d+", lines_list[i - 1])
       line2 = re.search("\A\d+", lines_list[i])
       if line1 is None or line2 is None:
         continue
 
-      #print ("Comparing {} and {}".format(line2, line1))
       gap = int(line2.group(0)) - int(line1.group(0))
       if gap > 30000:
-
         o.writelines(lines_list[i - 1])
         o.writelines(lines_list[i])
         o.writelines("Difference: {}\n".format(gap))

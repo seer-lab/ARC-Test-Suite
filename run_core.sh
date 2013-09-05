@@ -47,8 +47,8 @@ do
     mv $CORE/src/config.py $TEST_RESULTS/$test/$OUTDIR/ # Config info
     mkdir $TEST_RESULTS/$test/$OUTDIR/output
     mv $CORE/output $TEST_RESULTS/$test/$OUTDIR  # Solution Program
-    mkdir $TEST_RESULTS/$test/$OUTDIR/tmp
-    mv $CORE/tmp $TEST_RESULTS/$test/$OUTDIR  # Tmp Directory
+    #mkdir $TEST_RESULTS/$test/$OUTDIR/tmp
+    #mv $CORE/tmp $TEST_RESULTS/$test/$OUTDIR  # Tmp Directory
 
     echo "::Cleaning up CORE for next test"
     cd $WORKING_DIR
