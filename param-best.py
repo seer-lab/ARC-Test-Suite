@@ -1,3 +1,27 @@
+"""
+This is the third parameter-study script. Before you run this, run
+param-analyze.py to generate the csv file. This script reads said csv
+file and prints out another with the best parameter values by program.
+
+In order the fields of the CSV file are:
+
+1. Parameter varied (_JPF_SEARCH_TIME_SECONDS, ...)
+2. Parameter value (90, ...)
+3. Test program (account, ...)
+4. Average number of minutes for a successful run
+5. Average number of seconds for a successful run
+
+An example csv line is:
+
+_JPF_SEARCH_TIME_SEC,account,90,3,15
+
+This reads as: "For the accounts program, the optimal search time for JPF
+is 90 seconds. On average the fix took 3 minutes and 15 seconds."
+
+Copyright 2013, David Kelk
+"""
+
+
 import subprocess
 import os
 import tempfile
@@ -70,11 +94,11 @@ with open('param.csv', 'rb') as paramIn:
       findBestParam("_EVOLUTION_POPULATION", [50, 30, 20, 10, 5], paramIn,
         cvsReader, cvsWriter)
       # Varying search depth
-      # findBestParam("_JPF_SEARCH_DEPTH", [200, 150, 100, 50, 25], paramIn,
-      #  cvsReader, cvsWriter)
+      findBestParam("_JPF_SEARCH_DEPTH", [200, 150, 100, 50, 25], paramIn,
+        cvsReader, cvsWriter)
       # Varying generations
-      # findBestParam("_EVOLUTION_GENERATIONS", [30, 20, 10, 5, 3], paramIn,
-      #  cvsReader, cvsWriter)
+      findBestParam("_EVOLUTION_GENERATIONS", [30, 20, 10, 5, 3], paramIn,
+        cvsReader, cvsWriter)
     finally:
       paramIn.close()
       paramOut.close()

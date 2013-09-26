@@ -14,6 +14,15 @@ In order the fields of the CSV file are:
 7. Average number of seconds for a successful run
 8. Average generation fix was found in (for successful runs)
 
+An example line is:
+
+_JPF_SEARCH_TIME_SEC, 90, account, 4, 4, 3, 15, 1.0
+
+This reads as, "For the account program, when we set the search time for
+JPF to 90 seconds, CORE found fixes 100 percent of the time (4/4). The
+average time to find a fix was 3 min 15 sec. On average the fix was found
+in the first generation."
+
 Copyright David Kelk 2013
 
 """

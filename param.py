@@ -13,7 +13,7 @@ Running this script can take a while, depending on the number of runs (_RUNS
 below) and the size of the test suite.
 After this program finishes, run param-analyze.py to get an analysis of the
 results. That script also creates a CSV file of the results for further
-analysis.
+analysis. Finally, run param-best.py
 
 NOTE that param.py and analyze.py shouldn't be mixed. That is, one shouldn't
 be used to analyze the results of the other.
@@ -159,8 +159,8 @@ def RunCore(configEntry, configVal):
         shutil.move(os.path.join(_CORE, "src", "config.py"), _OUT_DIR)
         if os.path.isdir(os.path.join(_CORE, "output")):
           shutil.move(os.path.join(_CORE, "output"), _OUT_DIR)
-        if os.path.isdir(os.path.join(_CORE, "tmp")):
-          shutil.move(os.path.join(_CORE, "tmp"), _OUT_DIR)
+        #if os.path.isdir(os.path.join(_CORE, "tmp")):
+        #  shutil.move(os.path.join(_CORE, "tmp"), _OUT_DIR)
 
         calculateTime(_OUT_DIR)
 
@@ -174,6 +174,7 @@ def RunCore(configEntry, configVal):
 # Varying population
 #runParam([50, 30, 20, 10, 5], "_EVOLUTION_POPULATION", 30)
 # Varying search depth
-runParam([200, 150, 100, 50, 25], "_JPF_SEARCH_DEPTH", 50)
+#runParam([200, 150, 100, 50, 25], "_JPF_SEARCH_DEPTH", 50)
+runParam([50, 25], "_JPF_SEARCH_DEPTH", 50)
 # Varying generations
 runParam([30, 20, 10, 5, 3], "_EVOLUTION_GENERATIONS", 30)
