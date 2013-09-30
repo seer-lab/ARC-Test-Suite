@@ -7,7 +7,7 @@ WORKING_DIR=`pwd`
 TEST_SUITE="$WORKING_DIR/test_suite"
 ARC="$WORKING_DIR/test_area/arc"
 TEST_RESULTS="$WORKING_DIR/test_results"
-RUNS="1"
+RUNS="20"
 OUTDIR="1"
 
 echo "::Starting ARC Testing (Run $RUN) using the ARC-Test-Suite"

@@ -7,7 +7,7 @@ WORKING_DIR=`pwd`
 TEST_SUITE="$WORKING_DIR/test_suite"
 CORE="$WORKING_DIR/test_area/core"
 TEST_RESULTS="$WORKING_DIR/test_results"
-RUNS="5"
+RUNS="20"
 OUTDIR="1"
 
 echo "::Starting CORE Testing (Run $RUN) using the Test-Suite"

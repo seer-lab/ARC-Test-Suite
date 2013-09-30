@@ -34,7 +34,7 @@ _ROOT_DIR = os.getcwd() #"/Users/kelk/workspace/ARC-Test-Suite/"
 _TEST_SUITE = os.path.join(_ROOT_DIR, "test_suite")
 _CORE = os.path.join(_ROOT_DIR, "test_area", "CORE")
 _TEST_RESULTS = os.path.join(_ROOT_DIR, "test_results")
-_RUNS = 5
+_RUNS = 20
 
 
 def runParam(valList, configEntry, defaultValue):
