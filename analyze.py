@@ -16,14 +16,18 @@ import os
 import tempfile
 import re
 
+# Look for gaps in the log files larger than this value (ms)
+_gapSize = 40000
+
 os.chdir("test_results")
 
 # Iterate over the fixed programs, by program
 for dirs in os.walk(os.getcwd()).next()[1]:
   os.chdir(dirs)
 
-  num_min = 0
   num_sec = 0
+  max_min = max_sec = 0
+  min_min = min_sec = 999999
   succ = 0
   tot_trials = 0
   tot_gens = 0
@@ -36,17 +40,17 @@ for dirs in os.walk(os.getcwd()).next()[1]:
 
     # Determine if the run was successful
     tot_trials += 1
-    if os.path.isfile("output" + os.sep + "build.xml"):
+    if os.path.isfile(os.path.join("output", "build.xml")):
       succ += 1  # 2. Fix rate
     else:
       # If it wasn't successful, we're done. Go to next
       os.chdir(os.pardir)
       continue
 
-    # 1. Determine the average time
+    # Determine the average time (To fix a program)
     if not os.path.isfile("time.txt"):
-      print("  In directory {}/{}, time.txt is missing."
-        .format(dirs,subdirs))
+      print("  In directory {}, time.txt is missing."
+        .format(os.path.join(dirs,subdirs)))
       os.chdir(os.pardir)
       continue
 
@@ -58,19 +62,34 @@ for dirs in os.walk(os.getcwd()).next()[1]:
     match = re.findall('(\d+)', line)
     #print("{}".format(match))
 
-    num_min += int(match[0]) # real min
-    num_sec += int(match[1]) # real sec
+    runMin = int(match[0]) # real min
+    runSec = int(match[1]) # real sec
 
-    # 3. Determine the average generation the fix was found in
-    if os.path.isdir("tmp" + os.sep):
-      os.chdir("tmp")
+    # Average time
+    num_sec += runMin * 60
+    num_sec += runSec
 
-      for i in xrange(100,0, -1):
-        if os.path.isdir(str(i)):
-          tot_gens += i
-          break;
+    # Max/min time
+    if (runMin > max_min or (runMin == max_min and runSec > max_sec)):
+      max_min = runMin
+      max_sec = runSec
+    if (runMin < min_min or (runMin == min_min and runSec < min_sec)):
+      min_min = runMin
+      min_sec = runSec
 
-      os.chdir(os.pardir)
+    # Determine the average generation the fix was found in
+    genFH = open('log.txt')
+    lineList = list()
+    lineList = genFH.readlines()
+
+    for i in range (1, len(lineList)):
+      findLine = re.search("Copying fixed project Individual:(\d+) Generation:(\d+) to",
+        lineList[i])
+      if findLine:
+        #print("Generation: {}".format(findLine.group(2)))
+        tot_gens += int(findLine.group(2))
+    genFH.close()
+
 
     # 4. Look for time gaps in the log file
     f = open('log.txt')
@@ -85,11 +104,19 @@ for dirs in os.walk(os.getcwd()).next()[1]:
       if line1 is None or line2 is None:
         continue
 
+
       gap = int(line2.group(0)) - int(line1.group(0))
-      if gap > 30000:
+      #print("{} - {} = {}".format(line2.group(0), line1.group(0), str(gap)))
+      # The static analysis takes a while and is usually around lines 55-65
+      # of the log file. It is a known gap so we don't want to see it in the
+      # output
+      if gap > _gapSize and (i < 55 or i > 65):
         o.writelines(lines_list[i - 1])
         o.writelines(lines_list[i])
         o.writelines("Difference: {}\n".format(gap))
+        print("  Gap greater than {}sec found in path {} at lines {}, {}"
+          .format(str(_gapSize / 1000), os.path.join(dirs,subdirs), str(i-1),
+          str(i)))
 
     f.close()
     o.close()
@@ -100,11 +127,21 @@ for dirs in os.walk(os.getcwd()).next()[1]:
   print("  {} success in {} trials".format(succ, tot_trials))
 
   if (tot_trials > 0):
+    if (succ > 0):
+      num_sec = int(num_sec / succ)
+    else:
+      num_sec = 0
+    avgMin = int(num_sec / 60)
+    avgSec = num_sec - avgMin*60
     print("  Average time of {} trials: {} min {} sec".format(succ,
-      num_min / tot_trials, num_sec / tot_trials))
+      avgMin, avgSec))
+    print("  Max time: {} min {} sec".format(max_min, max_sec))
+    print("  Min time: {} min {} sec".format(min_min, min_sec))
 
   if (succ > 0):
     # Problem when all fixes are found in 1st gen, avg = 0
     print("  Average generation fix was found in: {}".format(tot_gens / float(succ)))
 
   os.chdir(os.pardir)
+
+print("\nGaps occuring around lnes 55-60 are due to the static analysis. ")
