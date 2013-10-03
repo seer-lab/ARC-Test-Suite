@@ -1,7 +1,8 @@
 *.class
 *.pyc
 test_area/arc/
-test_area/core/
+test_area/CORE/
+test_area/CORE-INC/
 test_suite/
 test_results/
 
