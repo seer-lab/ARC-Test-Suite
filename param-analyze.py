@@ -1,5 +1,6 @@
-""" See param.py for the creation of the analysis data. This program is run
-after param.py to summarize the data and create a csv file for further analysis.
+""" See param-study.py for the creation of the analysis data. This program
+is run after param-study.py to summarize the data and create a csv file for
+further analysis.
 The analysis here is similar to analyze.py, but customized to the specific
 parameter analysis problem. (See analyze.py.)
 
@@ -71,7 +72,6 @@ def mainAnalyze(dataDir, outConfigEntry, outVal, outTestProg, outCsv):
   succ = 0
   tot_trials = 0
   tot_gens = 0
-
   #print("{}".format(dirs))
 
   # Iterate over the number of runs
@@ -143,22 +143,28 @@ def mainAnalyze(dataDir, outConfigEntry, outVal, outTestProg, outCsv):
 
   print("      {} success in {} trials".format(succ, tot_trials))
 
-  if (tot_trials > 0):
-    print("      Average time of {} trials: {} min {} sec".format(succ,
-      num_min / tot_trials, num_sec / tot_trials))
-
+  totTime = 0
+  totMin = 0
+  totSec = 0
+  if (succ > 0):
+    totTime = (num_min * 60 + num_sec) / succ
+    totMin = int(totTime/60)
+    totSec = totTime - totMin * 60
+    print("      Average time of {} successful trials: {} min {} sec".format(succ,
+      totMin, totSec))
+  else:
+    print("      There were no successful trials.")
   # Division by zero case
   avgGenFix = 0
   if (succ > 0):
     avgGenFix = tot_gens / float(succ)
     # Problem when all fixes are found in 1st gen, avg = 0
-    print("      Average generation fix was found in: {}".format(avgGenFix))
+    print("      Average generation fix was successfully found in: {}".format(avgGenFix))
 
   # _EVOLUTION_POPULATION, 50, account, 4, 4, 7, 44, 1.25
 
   outCsv.writelines("{}, {}, {}, {}, {}, {}, {}, {}\n".format(outConfigEntry,
-    outVal, outTestProg, tot_trials, succ, num_min / tot_trials,
-    num_sec / tot_trials, avgGenFix))
+    outVal, outTestProg, tot_trials, succ, totMin, totSec, avgGenFix))
 
   os.chdir(os.pardir)
 
@@ -167,16 +173,16 @@ def mainAnalyze(dataDir, outConfigEntry, outVal, outTestProg, outCsv):
 
 
 
-outCsv = open(os.path.join(_ROOT_DIR,'param.csv'), 'w')
+outCsv = open(os.path.join(_ROOT_DIR,'param-analyze.csv'), 'w')
 try:
   # Varying time
   analyzeParam([90, 60, 30, 20, 10], "_JPF_SEARCH_TIME_SEC", outCsv)
   # Varying population
   analyzeParam([50, 30, 20, 10, 5], "_EVOLUTION_POPULATION", outCsv)
   # Varying search depth
-  #analyzeParam([200, 150, 100, 50, 25], "_JPF_SEARCH_DEPTH", outCsv)
+  analyzeParam([200, 150, 100, 50, 25], "_JPF_SEARCH_DEPTH", outCsv)
   # Varying generations
-  #analyzeParam([30, 20, 10, 5, 3], "_EVOLUTION_GENERATIONS", outCsv)
+  analyzeParam([30, 20, 10, 5, 3], "_EVOLUTION_GENERATIONS", outCsv)
 finally:
   outCsv.close()
   print "param.csv created."

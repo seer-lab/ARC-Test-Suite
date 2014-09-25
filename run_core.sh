@@ -7,10 +7,10 @@ WORKING_DIR=`pwd`
 TEST_SUITE="$WORKING_DIR/test_suite"
 CORE="$WORKING_DIR/test_area/core"
 TEST_RESULTS="$WORKING_DIR/test_results"
-RUNS="20"
+RUNS="10"
 OUTDIR="1"
 
-echo "::Starting CORE Testing (Run $RUN) using the Test-Suite"
+echo "::Starting CORE Testing (Run $RUNS) using the Test-Suite"
 
 # Iterate over all the tests and work through them
 cd $TEST_SUITE
@@ -50,7 +50,7 @@ do
     #mkdir $TEST_RESULTS/$test/$OUTDIR/tmp
     #mv $CORE/tmp $TEST_RESULTS/$test/$OUTDIR  # Tmp Directory
 
-    echo "::Cleaning up CORE for next test"
+    echo "::Cleaning up CORE for the next test"
     cd $WORKING_DIR
     rm -Rf $CORE/output
     rm -Rf $CORE/project_backup

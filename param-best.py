@@ -78,7 +78,7 @@ def findBestParam(configEntry, paramValsList, paramIn, cvsReader, cvsWriter):
 
 
 
-with open('param.csv', 'rb') as paramIn:
+with open('param-analyze.csv', 'rb') as paramIn:
   dialect = csv.Sniffer().sniff(paramIn.read(1024))
   paramIn.seek(0)
   cvsReader = csv.reader(paramIn, dialect)

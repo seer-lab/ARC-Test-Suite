@@ -2,10 +2,14 @@
 test_results, determine if the fix was successful or not.
 Considering only successful fixes:
 
-1. Determine the average real time from time.txt.
-2. Determine average fix rate by looking for files in the
-   output directory.
-3. Determine the average generation that the fix is found in.
+- Determine the number of successes.
+- Determine the average time, max time and min time for a fix, all from
+  time.txt.
+- Determine average fix rate by looking for files in the
+  output directory.
+- Determine the average generation that the fix is found in.
+- Optionally, display large time gaps. These are interesting as they
+  could indicate something has gone wrong, or something could be improved.
 
 Copyright David Kelk 2013
 
@@ -83,11 +87,11 @@ for dirs in os.walk(os.getcwd()).next()[1]:
     lineList = genFH.readlines()
 
     for i in range (1, len(lineList)):
-      findLine = re.search("Copying fixed project Individual:(\d+) Generation:(\d+) to",
+      findLine = re.search("Copying fixed (\w+),? Individual:(\d+) Generation:(\d+) to",
         lineList[i])
       if findLine:
-        #print("Generation: {}".format(findLine.group(2)))
-        tot_gens += int(findLine.group(2))
+        #print("Generation: {}".format(findLine.group(3)))
+        tot_gens += int(findLine.group(3))
     genFH.close()
 
 
@@ -114,9 +118,9 @@ for dirs in os.walk(os.getcwd()).next()[1]:
         o.writelines(lines_list[i - 1])
         o.writelines(lines_list[i])
         o.writelines("Difference: {}\n".format(gap))
-        print("  Gap greater than {}sec found in path {} at lines {}, {}"
-          .format(str(_gapSize / 1000), os.path.join(dirs,subdirs), str(i-1),
-          str(i)))
+        print("  Gap of {}sec found in path {} at lines {}, {}"
+          .format(str(gap / 1000), os.path.join(dirs,subdirs), str(i),
+          str(i+1)))
 
     f.close()
     o.close()
@@ -139,7 +143,6 @@ for dirs in os.walk(os.getcwd()).next()[1]:
     print("  Min time: {} min {} sec".format(min_min, min_sec))
 
   if (succ > 0):
-    # Problem when all fixes are found in 1st gen, avg = 0
     print("  Average generation fix was found in: {}".format(tot_gens / float(succ)))
 
   os.chdir(os.pardir)

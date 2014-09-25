@@ -15,8 +15,8 @@ After this program finishes, run param-analyze.py to get an analysis of the
 results. That script also creates a CSV file of the results for further
 analysis. Finally, run param-best.py
 
-NOTE that param.py and analyze.py shouldn't be mixed. That is, one shouldn't
-be used to analyze the results of the other.
+NOTE that param-study.py and analyze.py shouldn't be mixed. That is, one
+shouldn't be used to analyze the results of the other.
 
 Copyright David Kelk 2013
 """
@@ -174,7 +174,6 @@ def RunCore(configEntry, configVal):
 # Varying population
 #runParam([50, 30, 20, 10, 5], "_EVOLUTION_POPULATION", 30)
 # Varying search depth
-#runParam([200, 150, 100, 50, 25], "_JPF_SEARCH_DEPTH", 50)
-runParam([50, 25], "_JPF_SEARCH_DEPTH", 50)
+runParam([200, 150, 100, 50, 25], "_JPF_SEARCH_DEPTH", 50)
 # Varying generations
 runParam([30, 20, 10, 5, 3], "_EVOLUTION_GENERATIONS", 30)

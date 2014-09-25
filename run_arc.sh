@@ -7,10 +7,10 @@ WORKING_DIR=`pwd`
 TEST_SUITE="$WORKING_DIR/test_suite"
 ARC="$WORKING_DIR/test_area/arc"
 TEST_RESULTS="$WORKING_DIR/test_results"
-RUNS="20"
+RUNS="10"
 OUTDIR="1"
 
-echo "::Starting ARC Testing (Run $RUN) using the ARC-Test-Suite"
+echo "::Starting ARC Testing (Run $RUNS) using the Test-Suite"
 
 # Iterate over all the tests and work through them
 cd $TEST_SUITE
@@ -50,7 +50,7 @@ do
     #mkdir $TEST_RESULTS/$test/$OUTDIR/tmp
     #mv $ARC/tmp $TEST_RESULTS/$test/$OUTDIR  # Tmp Directory
 
-    echo "::Cleaning up ARC for next test"
+    echo "::Cleaning up ARC for the next test"
     cd $WORKING_DIR
     rm -Rf $ARC/output
     rm -Rf $ARC/project_backup
